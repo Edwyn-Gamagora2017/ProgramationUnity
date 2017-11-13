@@ -20,6 +20,10 @@ public class TP03_Ex05 : MonoBehaviour {
 		Debug.Log ( "Collision" );
 		collisions++;
 
+		MeshRenderer renderer = GetComponent<MeshRenderer> ();
+		renderer.material.shader = Shader.Find ("Specular");
+		renderer.material.color = Color.green;
+
 		if (collisions == 3) {
 			Destroy ( gameObject );
 		}
